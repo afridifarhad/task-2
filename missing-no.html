@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Missing Number Identification</h1>
+
+    <script>
+      function findMissingNumber(numbers) {
+        let missingNumber = null;
+        for (let i = 0; i < numbers.length - 1; i++) {
+          if (numbers[i + 1] - numbers[i] !== 1) {
+            missingNumber = numbers[i] + 1;
+            break;
+          }
+        }
+        return missingNumber;
+      }
+
+      
+      console.log(findMissingNumber([11, 12, 14, 15, 16, 18, 19, 20]));
+    </script>
+  </body>
+</html>
